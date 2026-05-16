@@ -22,6 +22,7 @@ public class Usuarios extends javax.swing.JFrame {
     public Usuarios() {
         initComponents();
         this.setLocationRelativeTo(null);
+        actualizarTabla("");
     }
     public void borrarDatos(){
         txtNombre.setText("");

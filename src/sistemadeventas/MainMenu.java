@@ -16,6 +16,10 @@ public class MainMenu extends javax.swing.JFrame {
     public MainMenu() {
         initComponents();
     }
+    
+    public MainMenu(int idUsuario){
+        initComponents();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -127,6 +131,11 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 120, 120));
 
         jPanel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -183,6 +192,12 @@ public class MainMenu extends javax.swing.JFrame {
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        Usuarios u1 = new Usuarios();
+        u1.setVisible(true);
+        u1.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jPanel7MouseClicked
 
     /**
      * @param args the command line arguments
